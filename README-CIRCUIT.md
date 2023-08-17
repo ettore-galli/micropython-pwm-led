@@ -12,9 +12,6 @@ As stated in the main readme file, the scope of this project is to give a starti
 
 ![schematic](images/led-pwm-schematic.jpg "Raspberry pi pico w pinout")
 
- 
 ![pinout](images/raspberry_pi_pico_w_pinout.png "Raspberry pi pico w pinout")
 
 ![pin numbering](images/raspberry_pi_pico_physical_pin_numbering.png "Raspberry pi pico w pinout")
-
-
