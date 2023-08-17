@@ -26,12 +26,11 @@ Mpremote tool
 General micropython download page
 <https://micropython.org/download/>
 
-Raspberry pi pico 2 download page
+Raspberry pi pico w download page
 <https://micropython.org/download/rp2-pico-w/>
 
-Raspberry pi pico 2 firmware download link
-Warning: This is very likely to change over time, check download page.
-<https://micropython.org/resources/firmware/rp2-pico-w-20230426-v1.20.0.uf2>
+Raspberry pi pico "plain/non-w" download page
+<https://micropython.org/download/rp2-pico/>
 
 ### Install micropython on the device
 
