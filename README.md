@@ -100,6 +100,8 @@ micropy stubs add micropython-rp2-pico_w-stubs
 
 This step creates the proper configuration for VS Code to use stubs.
 
+Stubs are needed only for linting and code completion, but not for development.
+
 Settings are created by default under the new project folder; after the project is created, you can do the following (alternative)
 
 * Use the newly created folder as project workspace
