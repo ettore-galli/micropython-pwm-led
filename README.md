@@ -10,7 +10,7 @@ This howto is about how to set up a working development environment for micropyt
 
 * Micropython is only needed on the device
 * You need a tool to upload your source to the device, like mpremote (see below)
-* You need stubs only to take advantage of autocompletion and syntax check, but not for the actual micropython program to run on the device.
+* You need stubs only to take advantage of autocompletion and linting, but not for the actual micropython program to run on the device.
 
 ### References
 
