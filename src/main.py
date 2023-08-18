@@ -17,7 +17,7 @@ class PWMLed:
         self.pwm_pin = pwm_pin
         self.adc_delay_seconds = adc_delay_seconds
         self.pwm_value_logger = pwm_value_logger
-        self.init_pwm()
+        # self.init_pwm()
         self.pwm_delay_seconds = pwm_delay_seconds
         self.pwm_duty = 0
 
@@ -47,15 +47,16 @@ class PWMLed:
     async def adc_loop(self):
         while True:
             value = self.adc.read_u16()
-            self.update_pwm_duty(self.adc_to_pwm(value))
-
+            pwm_value = self.adc_to_pwm(value)
+            self.update_pwm_duty(pwm_value)
+            self.pwm_value_logger(pwm_value)
             await asyncio.sleep(self.adc_delay_seconds)
 
     async def pwm_change_loop(self):
         while True:
             duty = self.get_pwm_duty()
             self.pwm0.duty_u16(duty)
-            self.pwm_value_logger(duty)
+            # self.pwm_value_logger(duty)
             await asyncio.sleep(self.pwm_delay_seconds)
 
 
@@ -81,4 +82,4 @@ async def main(coroutines):
 if __name__ == "__main__":
     adcm = PWMLed(pwm_value_logger=display_adc)
 
-    asyncio.run(main([adcm.pwm_change_loop, adcm.adc_loop]))
+    asyncio.run(main([adcm.adc_loop]))
